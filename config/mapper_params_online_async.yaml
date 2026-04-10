@@ -15,15 +15,15 @@ slam_toolbox:
     base_frame: base_footprint
     scan_topic: /scan
     use_map_saver: true
-    mode: localization #mapping #
+    mode: localization #mapping
 
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    map_file_name: /home/clv/ros2_ws/src/ar_project/maps/test_map_1/test_world_1_map_serial
-    #map_file_name: /home/clv/ros2_ws/src/ar_project/maps/test_map_2/test_world_2_map_serial
-    #map_file_name: /home/clv/ros2_ws/src/ar_project/maps/test_map_3/test_world_3_map_serial
-    # map_start_pose: [0.0, 0.0, 0.0]
+    map_file_name: /home/dmitry/ros2_ws/src/ar_project/maps/test_map_1/test_world_1_map_serial
+    #map_file_name: /home/dmitry/ros2_ws/src/ar_project/maps/test_map_2/test_world_2_map_serial
+    #map_file_name: /home/dmitry/ros2_ws/src/ar_project/maps/test_map_3/test_world_3_map_serial
+    #map_start_pose: [0.0, 0.0, 0.0]
     map_start_at_dock: true
 
     debug_logging: false
