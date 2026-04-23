@@ -3,9 +3,14 @@ import os
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, TimerAction
+from launch.actions import (
+    IncludeLaunchDescription,
+    DeclareLaunchArgument,
+    SetEnvironmentVariable,
+    TimerAction,
+)
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
+from launch.substitutions import EnvironmentVariable, LaunchConfiguration
 
 from launch_ros.actions import Node
 
@@ -13,6 +18,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     package_name = 'ar_project'
     pkg_share = get_package_share_directory(package_name)
+    models_path = os.path.join(pkg_share, 'models')
 
     world = LaunchConfiguration('world')
 
@@ -118,6 +124,14 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
+        SetEnvironmentVariable(
+            name='GZ_SIM_RESOURCE_PATH',
+            value=[models_path, ':', EnvironmentVariable('GZ_SIM_RESOURCE_PATH', default_value='')]
+        ),
+        SetEnvironmentVariable(
+            name='IGN_GAZEBO_RESOURCE_PATH',
+            value=[models_path, ':', EnvironmentVariable('IGN_GAZEBO_RESOURCE_PATH', default_value='')]
+        ),
         DeclareLaunchArgument(
             'world',
             default_value=os.path.join(pkg_share, 'worlds', 'test_1.world'),

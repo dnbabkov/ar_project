@@ -104,37 +104,37 @@
     <include>
       <name>Stop Sign</name>
       <pose>4.41372 -1.49457 0.007263 0 0 -1.63625</pose>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Stop Sign</uri>
+      <uri>model://stop_sign</uri>
     </include>
 
     <include>
       <name>first_2015_trash_can</name>
       <pose>4.55439 -0.514404 0 0 0 -0.005617</pose>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/First 2015 Trash Can</uri>
+      <uri>model://first_2015_trash_can</uri>
     </include>
 
     <include>
       <name>fire_hydrant</name>
       <pose>4.43479 1.34482 0 0 0 0</pose>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Fire Hydrant</uri>
+      <uri>model://fire_hydrant</uri>
     </include>
 
     <include>
       <name>Construction Cone</name>
       <pose>4.55889 2.2944 0 0 0 -0.00009</pose>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Construction Cone</uri>
+      <uri>model://construction_cone</uri>
     </include>
 
     <include>
       <name>cardboard_box</name>
       <pose>4.55067 0.549052 0.149 0 0 0</pose>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Cardboard Box</uri>
+      <uri>model://cardboard_box</uri>
     </include>
 
     <include>
       <name>car_wheel</name>
       <pose>4.51168 -2.21253 0 0 0 0</pose>
-      <uri>https://fuel.gazebosim.org/1.0/OpenRobotics/models/Car Wheel</uri>
+      <uri>model://car_wheel</uri>
     </include>
 
     <model name="wood_wall2">
